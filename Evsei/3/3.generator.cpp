@@ -6,7 +6,7 @@ using std::cout;
 using std::endl;
 int main(){ 
 	setlocale(LC_ALL, "Russian");
-int mas[17];
+int mas[17];// массив??????? Зачем?
 int a = 3098, c = 1524872, m = 859043;
 mas[0] = 1;
 cout << mas[0] << "=:1" << endl;

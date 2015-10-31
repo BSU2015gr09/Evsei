@@ -7,7 +7,7 @@ using std::cin;
 using std::endl;
 int main(){
 	setlocale(LC_ALL, "Russian");
-	float mas[40], a, b;
+	float mas[40], a, b;// массив??????? Зачем?
 	int n;
 	cout << "            Отношение сосодених чисел последовательности Фибоначчи      " << endl;
 	cout << "\n";

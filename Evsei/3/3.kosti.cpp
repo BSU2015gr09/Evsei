@@ -7,7 +7,7 @@ using std::cin;
 using std::endl;
 int main(){
 	setlocale(LC_ALL, "Russian");
-	int a, b, i, j, c = 3;
+	int a, b, i, j, c = 3;// а зачем 4 переменные для результата?
 	srand(time(NULL));
 	while (c != 0)
 	{

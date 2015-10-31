@@ -44,7 +44,7 @@ int main()
 				cout << "Результат = " << rez << endl;
 				break;
 			case '/':
-				switch (int(k))
+				switch (int(k))// зачем приведение типа?
 				{
 				case 0:
 					cout << "Выражение не имеет смысла.(при делении на ноль)" << endl;
@@ -62,7 +62,7 @@ int main()
 				n = 3;
 				break;
 			}
-			switch (int(n))
+			switch (int(n))// зачем приведение типа?
 			{
 			case 2:
 				cout << "Введите операцию" << endl;
