@@ -145,25 +145,24 @@ void findFewMinValues(int array[], int N){
 	int count = 0;
 	int curMinValue = findMinValue(array, N);
 	int limit = 0;
-	while (count <= curMinValue)
+	while (count <= 1)
 	{
 		for (int i = 0; i < N; i++){
 			if (array[i] == curMinValue){
 				count++;
 			}
-			if (count == 1){
-				count = 0;
-				curMinValue = findMinValueGreaterPrevMinValue(array, N, curMinValue);
-			}
-			else{
+			if (count > 1){
 				break;
 			}
+			
 		}
-
-		if (limit == N){
+		
+		if (count > 1 || limit == N){
 			break;
 		}
 		else{
+			count = 0;
+			curMinValue = findMinValueGreaterPrevMinValue(array, N, curMinValue);
 			limit++;
 		}
 	}
@@ -201,28 +200,32 @@ int findMinValue(int array[], int N){
 }
 
 int findMaxValueNotGreaterPrevMaxValue(int array[], int N, int prevMaxValue){
+	bool found = false;
 	int maxValue = array[0];
 	for (int i = 0; i < N; i++){
 		int curValue = array[i];
 		if (curValue < prevMaxValue){
-			if (curValue > maxValue){
+			if (!found || (found && curValue > maxValue)){
 				maxValue = curValue;
+				found = true;
 			}
 		}
-		
 	}
 
 	return maxValue;
 }
 
 int findMinValueGreaterPrevMinValue(int array[], int N, int prevMinValue){
+	bool found = false;
 	int minValue = array[0];
 	for (int i = 0; i < N; i++){
 		int curValue = array[i];
 		if (curValue > prevMinValue){
-			if (curValue < minValue){
+			if (!found || (found && curValue < minValue)){
 				minValue = curValue;
+				found = true;
 			}
+			
 		}
 	}
 	return minValue;
