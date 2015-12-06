@@ -1,12 +1,12 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <stdlib.h>
 using namespace std;
 
-//печать массива
+//РїРµС‡Р°С‚СЊ РјР°СЃСЃРёРІР°
 void initArray(int[], int);
 void printArray(int[], int);
 
-//функция возвращает первый индекс, если таких чисел несколько, и - 1 если такого числа нет.
+//С„СѓРЅРєС†РёСЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РїРµСЂРІС‹Р№ РёРЅРґРµРєСЃ, РµСЃР»Рё С‚Р°РєРёС… С‡РёСЃРµР» РЅРµСЃРєРѕР»СЊРєРѕ, Рё - 1 РµСЃР»Рё С‚Р°РєРѕРіРѕ С‡РёСЃР»Р° РЅРµС‚.
 int findValue(int array[], int N, int value);
 
 const int N = 10;
@@ -15,15 +15,15 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int array[N], value;;
-	cout << "Заполните массив" << endl;
+	cout << "Р—Р°РїРѕР»РЅРёС‚Рµ РјР°СЃСЃРёРІ" << endl;
 	initArray(array, N);
-	cout << "Введите число для поиска" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РґР»СЏ РїРѕРёСЃРєР°" << endl;
 	cin >> value;
 	int valueIndex = findValue(array, N, value);
 	if (valueIndex == -1){
-		cout << "Введенное число не найдено" << endl;
+		cout << "Р’РІРµРґРµРЅРЅРѕРµ С‡РёСЃР»Рѕ РЅРµ РЅР°Р№РґРµРЅРѕ" << endl;
 	}else{
- 		cout << "Позиция числа равна " << valueIndex << endl;
+ 		cout << "РџРѕР·РёС†РёСЏ С‡РёСЃР»Р° СЂР°РІРЅР° " << valueIndex << endl;
 	}
 
 }

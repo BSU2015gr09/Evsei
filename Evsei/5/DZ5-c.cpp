@@ -1,8 +1,8 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <stdlib.h>
 using namespace std;
 
-//печать массива
+//РїРµС‡Р°С‚СЊ РјР°СЃСЃРёРІР°
 void initArray(int[], int);
 void printArray(int[], int);
 
@@ -15,10 +15,10 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int array[N], arraySize;
-	cout << "Введите размер массива" << endl;
+	cout << "В¬РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°" << endl;
 	cin >> arraySize;
 	initArray(array, arraySize);
-	cout << "Исходный массив" << endl;
+	cout << "В»СЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ" << endl;
 	printArray(array, arraySize);
 	
 	int limitOperations = 2, countOfOperations = 0;
@@ -26,7 +26,7 @@ int main()
 	while (countOfOperations != limitOperations){
 		cutFirstElement(array, arraySize);
 		addElement(array, arraySize);
-		cout << "Измененный массив" << endl;
+		cout << "В»Р·РјРµРЅРµРЅРЅС‹Р№ РјР°СЃСЃРёРІ" << endl;
 		printArray(array, arraySize);
 		countOfOperations++;
 	}
@@ -64,7 +64,7 @@ void cutFirstElement(int array[], int & arrayZise)
 void addElement(int array[], int &arrayZise)
 {
 	int newVal;
-	cout << "Dведите число, которое нужно добавить в конец массива " << endl;
+	cout << "DРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ, РєРѕС‚РѕСЂРѕРµ РЅСѓР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР° " << endl;
 	cin >> newVal;
 	array[arrayZise] = newVal;
 	arrayZise++;

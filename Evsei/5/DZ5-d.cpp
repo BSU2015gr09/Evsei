@@ -1,15 +1,15 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <stdlib.h>
 using namespace std;
 
-//печать массива
+//РїРµС‡Р°С‚СЊ РјР°СЃСЃРёРІР°
 void initArray(int[], int);
 void printArray(int[], int);
 void bubbleSort(int [], int );
 
 void addElement(int[], int &);
 
-//функция возвращает первый индекс, если таких чисел несколько, и - 1 если такого числа нет.
+//С„СѓРЅРєС†РёСЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РїРµСЂРІС‹Р№ РёРЅРґРµРєСЃ, РµСЃР»Рё С‚Р°РєРёС… С‡РёСЃРµР» РЅРµСЃРєРѕР»СЊРєРѕ, Рё - 1 РµСЃР»Рё С‚Р°РєРѕРіРѕ С‡РёСЃР»Р° РЅРµС‚.
 int findValue(int [], int , int );
 void removeElement(int [], int &, int );
 const int N = 100;
@@ -18,24 +18,24 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int array[N], arraySize, valueForFind;
-	cout << "Введите размер массива" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°" << endl;
 	cin >> arraySize;
 	initArray(array, arraySize);
-	cout << "Исходный массив" << endl;
+	cout << "РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ" << endl;
 	printArray(array, arraySize);
 	
 	addElement(array, arraySize);
 	bubbleSort(array, arraySize);
-	cout << "Введите элемент который вы хотите найти" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚ РєРѕС‚РѕСЂС‹Р№ РІС‹ С…РѕС‚РёС‚Рµ РЅР°Р№С‚Рё" << endl;
 	cin >> valueForFind;
 	
 	int valueIndex = findValue(array, arraySize, valueForFind);
 	if (valueIndex == -1){
-		cout << "Введенное число не найдено" << endl;
+		cout << "Р’РІРµРґРµРЅРЅРѕРµ С‡РёСЃР»Рѕ РЅРµ РЅР°Р№РґРµРЅРѕ" << endl;
 	}
 	else{
 		removeElement(array, arraySize, valueIndex);
-		cout << "Конечный массив" << endl;
+		cout << "РљРѕРЅРµС‡РЅС‹Р№ РјР°СЃСЃРёРІ" << endl;
 		printArray(array, arraySize);
 	}
 
@@ -79,7 +79,7 @@ void bubbleSort(int array[], int arraySize)
 void addElement(int array[], int &arrayZise)
 {
 	int newVal;
-	cout << "Dведите число, которое нужно добавить " << endl;
+	cout << "DРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ, РєРѕС‚РѕСЂРѕРµ РЅСѓР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ " << endl;
 	cin >> newVal;
 	array[arrayZise] = newVal;
 	arrayZise++;
