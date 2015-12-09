@@ -1,8 +1,8 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <stdlib.h>
 using namespace std;
 
-//печать массива
+//РїРµС‡Р°С‚СЊ РјР°СЃСЃРёРІР°
 void initArray(char[], int);
 void printArray(char[], int);
 void changeZtoF(char[], int);
@@ -13,14 +13,14 @@ int main()
 	char array[N];
 	initArray(array, N);
 	printArray(array, N);
-	//заменяем последнюю встреченную в массиве букву Z на букву F
+	//Р·Р°РјРµРЅСЏРµРј РїРѕСЃР»РµРґРЅСЋСЋ РІСЃС‚СЂРµС‡РµРЅРЅСѓСЋ РІ РјР°СЃСЃРёРІРµ Р±СѓРєРІСѓ Z РЅР° Р±СѓРєРІСѓ F
 	changeZtoF(array, N);
 	printArray(array, N);
 }
 
 void initArray(char array[], int N)
 {
-	cout << "Введите элементы массива: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°: " << endl;
 	for (int i = 0; i < N; i++){
 		cin >> array[i];
 	}
@@ -42,5 +42,5 @@ void changeZtoF(char array[], int){
 			break;
 		}
 	}
-	cout << "Новый массив: " << endl;
+	cout << "РќРѕРІС‹Р№ РјР°СЃСЃРёРІ: " << endl;
 }
