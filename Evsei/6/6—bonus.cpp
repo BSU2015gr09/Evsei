@@ -25,7 +25,7 @@ int main(){
 	array[MAX_STACK_SIZE] = {};
 	int curValue, n = MAX_STACK_SIZE;
 	
-	cout << "В стек будет добавлено  "<< n <<"элементов используя метод pop" << endl;
+	cout << "В стек будет добавлено  "<< n <<" элементов используя метод pop" << endl;
 	for (int i = 0; i < n; i++){
 		curValue = randomValue();
 		cout << "Добавлено: " << curValue << endl;
@@ -33,7 +33,7 @@ int main(){
 	}
 	curValue = randomValue();
 	cout << "Попробуем добавить в заполенный стек элемент  " << curValue << endl;
-	cout << "Из стека будет извлечено  " << n << "элементов" << endl;
+	cout << "Из стека будет извлечено  " << n << " элементов" << endl;
 	for (int i = 0; i < n; i++){
 		cout << "Извлечено из стека: " << pop() << endl;
 	}
@@ -48,6 +48,7 @@ int main(){
 
 	cout << "Извлечено из стека: " << pop() << endl;
 	cout << "Извлечено из стека: " << pop() << endl;
+	cout << "Попробуем извлечь еще один элемент из стека" << endl;
 	pop();
 	
 }
