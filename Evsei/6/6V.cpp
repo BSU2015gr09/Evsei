@@ -1,12 +1,12 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <stdlib.h>
 using namespace std;
 
-//инициализация массива
+//РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РјР°СЃСЃРёРІР°
 void initArray(char[], int);
-//печать массива
+//РїРµС‡Р°С‚СЊ РјР°СЃСЃРёРІР°
 void printArray(char[], int);
-//ищем в массиве какая буква встречается чаще всего
+//РёС‰РµРј РІ РјР°СЃСЃРёРІРµ РєР°РєР°СЏ Р±СѓРєРІР° РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ С‡Р°С‰Рµ РІСЃРµРіРѕ
 char valueRepeatedGreaterOthers(char[], int);
 const int N = 10;
 int main()
@@ -15,14 +15,14 @@ int main()
 	char array[N];
 	initArray(array, N);
 	printArray(array, N);
-	//ищем в массиве какая буква встречается чаще всего
+	//РёС‰РµРј РІ РјР°СЃСЃРёРІРµ РєР°РєР°СЏ Р±СѓРєРІР° РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ С‡Р°С‰Рµ РІСЃРµРіРѕ
 	char maxChar = valueRepeatedGreaterOthers(array, N);
-	cout << "Наиболее часто встречается буква  " << maxChar << endl;
+	cout << "РќР°РёР±РѕР»РµРµ С‡Р°СЃС‚Рѕ РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ Р±СѓРєРІР°  " << maxChar << endl;
 }
 
 void initArray(char array[], int N)
 {
-	cout << "Введите элементы массива: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°: " << endl;
 	for (int i = 0; i < N; i++){
 		cin >> array[i];
 	}
