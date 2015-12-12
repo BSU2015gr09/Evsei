@@ -1,10 +1,11 @@
 ﻿#include <iostream>
 #include <stdlib.h>
 using namespace std;
-
-//печать массива
+//инициализация массива массива
 void initArray(char[], int);
+//печать массива
 void printArray(char[], int);
+//заменяем последнюю встреченную в массиве букву Z на букву F
 void changeZtoF(char[], int);
 const int N = 10;
 int main()
@@ -13,8 +14,9 @@ int main()
 	char array[N];
 	initArray(array, N);
 	printArray(array, N);
-	//заменяем последнюю встреченную в массиве букву Z на букву F
+	//заменяем последнюю встреченную в массиве букву 'Z' на букву 'F'
 	changeZtoF(array, N);
+	cout << "Новый массив: " << endl;
 	printArray(array, N);
 }
 
@@ -36,11 +38,11 @@ void printArray(char array[], int N){
 }
 
 void changeZtoF(char array[], int){
-	for (int i = N; i > 0; i--){
-		if (array[i] == 'z'){
-			array[i] = 'f';
-			break;
+	for (int i = N-1; i > 0; i--){
+		if (array[i] == 'Z' || array[i] == 'z'){
+			array[i] = 'F';
+			return;
 		}
 	}
-	cout << "Новый массив: " << endl;
+	cout << endl << "Буква Z не была найдена" << endl;
 }

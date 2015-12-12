@@ -6,20 +6,29 @@ using namespace std;
 void initArray(int[], int);
 void printArray(int[], int);
 //удаляем N-ый элемент массива (сдвигая остальные элементы)
-void deleteValue(int[], int, int);
+void deleteValue(int[], int& , int);
+int readValue();
 const int N = 10;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int array[N], n = 0;
+	int arraySize = N;
+	int array[N];
 	//инициализация массива
-	initArray(array, N);
+	initArray(array, arraySize);
 	//печать массива
-	printArray(array, N);
+	printArray(array, arraySize);
 	//удаляем N-ый элемент массива (сдвигая остальные элементы)
-	deleteValue(array, N, n);
+	int n = readValue();
+	if (n > 0 && n <= N){
+		deleteValue(array, arraySize, n);
+	}
+	else{
+		cout << "Позиция должна быть больше 0, но меньше " << N << endl;
+	}
+	
 	//печать нового массива
-	printArray(array, N);
+	printArray(array, arraySize);
 }
 
 void initArray(int array[], int N)
@@ -39,15 +48,18 @@ void printArray(int array[], int N){
 
 }
 
-void deleteValue(int array[], int N, int n)
+void deleteValue(int array[], int &N, int n)
 {
-	while (n<0 || n>N){
-	}
-	cout << "введите номер элемента, который нужно удалить : ";
-	cin >> n;
-	for (int i = n; i < N - 1; i++){
+	for (int i = n-1; i < N - 1; i++){
 		array[i] = array[i + 1];
 	}
 	array[N - 1] = 0;
-	cout << endl;
+	N--;
+}
+
+int readValue(){
+	int n;
+	cout << "введите номер элемента, который нужно удалить : " << endl;
+	cin >> n;
+	return n;
 }
