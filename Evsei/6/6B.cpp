@@ -53,7 +53,7 @@ void deleteValue(int array[], int &N, int n)
 	for (int i = n-1; i < N - 1; i++){
 		array[i] = array[i + 1];
 	}
-	array[N - 1] = 0;
+	array[N - 1] = 0; // почему и зачем именно 0???? 
 	N--;
 }
 
