@@ -7,7 +7,7 @@ void initArray(char[], int);
 //печать массива
 void printArray(char[], int);
 //ищем в массиве какая буква встречается чаще всего
-char valueRepeatedGreaterOthers(char[], int);
+char valueRepeatedGreaterOthers(char[], int);// Супер!!!!!!!!!!! Я аж прослезился.....
 const int N = 10;
 int main()
 {
