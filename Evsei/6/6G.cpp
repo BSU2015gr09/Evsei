@@ -3,7 +3,7 @@
 using namespace std;
 //инициализация массива массива
 void initArray(char[], int);
-//печать массива
+//печать массива 
 void printArray(char[], int);
 //заменяем последнюю встреченную в массиве букву Z на букву F
 void changeZtoF(char[], int);
