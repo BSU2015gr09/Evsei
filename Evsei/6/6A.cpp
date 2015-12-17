@@ -5,7 +5,7 @@ using namespace std;
 const int MAX_STACK_SIZE = 50;
 int array[MAX_STACK_SIZE];
 //позиция последнкго помещенного в стек элемента
-int top = -1;
+int top = -1;// использование глобальной переменной?????? для такой простой задачи????
 
 //Поместить число в стек(push)
 void push(int);
@@ -14,8 +14,8 @@ int pop();
 //Распечатать вершину стека (view)
 void view();
 //Распечатать кол-во элементов в стеке
-void printStackSize();
-int readValue();
+void printStackSize();// очень странная ф-ция.... Зачем????
+int readValue();// очень странная ф-ция.... Зачем????
 
 
 int main(){
