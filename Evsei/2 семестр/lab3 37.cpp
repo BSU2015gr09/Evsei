@@ -23,7 +23,7 @@ int main(){
 		if (revAlphOrder(p)){
 			cout << "Порядок обратный алфавитному у [ " << p << " ]" << endl;
 		}
-		p = strtok(NULL, " ,.-;:");
+		p = strtok(NULL, " ,.-;:");//Смогла ли пояснить????? НЕТ!!!!!!!!!!!!! То ли украдено, то ли писала не сама!!!!
 	}
 	system("pause");
 	return 0;
@@ -54,8 +54,9 @@ void enterString(char * str, short n){
 
 //проверяем массив на нужную нам сортировку
 bool revAlphOrder(char * str){
+	// Тут использовать библиотечную ф-цию....
 	while (*(++str)){
-		if (*(str - 1) < *(str))
+		if (*(str - 1) < *(str)) 
 			return false;
 	}
 	return true;
